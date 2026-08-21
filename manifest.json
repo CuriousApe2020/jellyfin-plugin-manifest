@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "category": "General",
+        "guid": "b24a1e41-befb-455c-8417-69b89f25c335",
+        "name": "Mediathek Downloader (CuriousApe2020 Fork)",
+        "description": "Mit dem Plugin kann man die Mediatheken der \u00f6ffentlich-rechtlichen Sender in Deutschland durchsuchen und Inhalte herunterladen. F\u00fcr die suche wird die MediathekViewWeb-API verwendet. Der Videos werden direkt \u00fcber die Original-URLs der Sender heruntergeladen. Es k\u00f6nnen Abos anglegt werden um z.B. Serien automatisch herunterzuladen. Dies ist ein Community-Fork von CatNoir2006/jellyfin-plugin-MediathekViewDL mit zus\u00e4tzlichen, noch nicht upstream gemergten Funktionen.\n",
+        "owner": "CuriousApe2020",
+        "overview": "Sucht und l\u00e4dt Inhalte aus den Mediatheken \u00fcber die MediathekViewWeb-API. Community-Fork mit zus\u00e4tzlichen Funktionen (Nebenspur-Erkennung, Originalversion-Sprachaufl\u00f6sung, Sender-\u00fcbergreifende Tonspur-Gruppierung).",
+        "versions": [
+            {
+                "version": "1.0.0.0",
+                "changelog": "Erste Version dieses Forks: baut auf dem aktuellen Stand von CatNoir2006/jellyfin-plugin-MediathekViewDL auf und erg\u00e4nzt folgende Funktionen:\r\n\r\n**Fehlende Tonspuren erkennen**\r\nManche ARD-Titel zeigen in MediathekView nur einen Eintrag, obwohl im Player mehrere Tonspuren w\u00e4hlbar sind (Originalversion, Audiodeskription, klare Sprache). Diese werden jetzt anhand des URL-Musters erkannt und als separate Tonspur-Dateien neben dem Hauptvideo gespeichert.\r\n\r\n**Echte Sprache der Originalversion ermitteln**\r\nFragt die eigene API des jeweiligen Senders (ARD, arte) nach der tats\u00e4chlich gesprochenen Sprache einer \"Originalversion\"-Tonspur ab, statt sie nur mit \"und\" (unbestimmt) zu kennzeichnen.\r\n\r\n**Tonspur-Bezeichnungen bereinigen**\r\nEntfernt auf Wunsch die vom Sender eingebettete Tonspur-Bezeichnung (z. B. \"Hessischer Rundfunk mp4toolbox 1.17.1\"), sodass Jellyfin selbst eine saubere, lokalisierte Bezeichnung erzeugt.\r\n\r\n**Sender-\u00fcbergreifende Tonspur-Gruppierung**\r\narte und ZDF/ZDFneo/3sat f\u00fchren dieselbe Sendung teils als mehrere eigenst\u00e4ndige Suchtreffer statt als eine Sendung mit w\u00e4hlbaren Tonspuren. Diese werden jetzt erkannt und als zus\u00e4tzliche Tonspuren zusammengef\u00fchrt statt als separate, sich \u00fcberschneidende Downloads behandelt.\r\n\r\n**Korrektur: falsche Standardsprache bei arte**\r\narte wird unter zwei Kanalvarianten gef\u00fchrt (ARTE.DE = Deutsch, ARTE.FR = Franz\u00f6sisch als Standardspur). Die franz\u00f6sische Standardspur wurde bisher f\u00e4lschlich als Deutsch erkannt.\r\n\r\n**Feldbeschreibungen f\u00fcr Abo-Standardwerte**\r\nDie Einstellungsseite zeigt jetzt dieselben Erkl\u00e4rungstexte wie der Abonnement-Editor.",
+                "timestamp": "2026-08-21T22:55:01Z",
+                "sourceUrl": "https://github.com/CuriousApe2020/jellyfin-plugin-MediathekViewDL/releases/download/v1.0.0.0/mediathek-downloader-curiousape2020-fork_1.0.0.0.zip",
+                "checksum": "e53aafa763c7c4b9f3a5e4ca31cce1fc",
+                "targetAbi": "10.11.0.0"
+            }
+        ]
+    }
+]
