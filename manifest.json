@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "category": "General",
+        "guid": "b24a1e41-befb-455c-8417-69b89f25c335",
+        "name": "CuriousApes-MediathekView-Downloader",
+        "description": "Mit dem Plugin kann man die Mediatheken der \u00f6ffentlich-rechtlichen Sender in Deutschland durchsuchen und Inhalte herunterladen. F\u00fcr die suche wird die MediathekViewWeb-API verwendet. Der Videos werden direkt \u00fcber die Original-URLs der Sender heruntergeladen. Es k\u00f6nnen Abos anglegt werden um z.B. Serien automatisch herunterzuladen. Dies ist ein Community-Fork von CatNoir2006/jellyfin-plugin-MediathekViewDL mit zus\u00e4tzlichen, noch nicht upstream gemergten Funktionen.\n",
+        "owner": "CuriousApe2020",
+        "overview": "Sucht und l\u00e4dt Inhalte aus den Mediatheken \u00fcber die MediathekViewWeb-API. Community-Fork mit zus\u00e4tzlichen Funktionen (Nebenspur-Erkennung, Originalversion-Sprachaufl\u00f6sung, Sender-\u00fcbergreifende Tonspur-Gruppierung).",
+        "versions": [
+            {
+                "version": "0.0.0.1",
+                "changelog": "",
+                "timestamp": "2026-08-26T13:03:36Z",
+                "sourceUrl": "https://github.com/CuriousApe2020/jellyfin-plugin-MediathekViewDL/releases/download/v0.0.0.1/curiousapes-mediathekview-downloader_0.0.0.1.zip",
+                "checksum": "af9a53751f951d70978e96e05ee75a90",
+                "targetAbi": "10.11.0.0"
+            }
+        ]
+    }
+]
