@@ -8,6 +8,14 @@
         "overview": "Sucht und l\u00e4dt Inhalte aus den Mediatheken \u00fcber die MediathekViewWeb-API. Community-Fork mit zus\u00e4tzlichen Funktionen (Nebenspur-Erkennung, Originalversion-Sprachaufl\u00f6sung, Sender-\u00fcbergreifende Tonspur-Gruppierung).",
         "versions": [
             {
+                "version": "0.0.0.7",
+                "changelog": "",
+                "timestamp": "2026-08-26T20:43:39Z",
+                "sourceUrl": "https://github.com/CuriousApe2020/jellyfin-plugin-MediathekViewDL/releases/download/v0.0.0.7/curiousapes-mediathekview-downloader_0.0.0.7.zip",
+                "checksum": "368fd5bd1909f0ebddbc203f6ddd78a1",
+                "targetAbi": "10.11.0.0"
+            },
+            {
                 "version": "0.0.0.6",
                 "changelog": "",
                 "timestamp": "2026-08-26T19:46:55Z",
