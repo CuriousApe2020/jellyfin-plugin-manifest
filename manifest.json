@@ -8,6 +8,14 @@
         "overview": "Sucht und l\u00e4dt Inhalte aus den Mediatheken \u00fcber die MediathekViewWeb-API. Community-Fork mit zus\u00e4tzlichen Funktionen (Nebenspur-Erkennung, Originalversion-Sprachaufl\u00f6sung, Sender-\u00fcbergreifende Tonspur-Gruppierung).",
         "versions": [
             {
+                "version": "0.0.0.36",
+                "changelog": "# v0.0.0.36 \u2014 Nachtragen von Sprachcodes repariert\r\n\r\n## Tonspur wurde nach dem Umbenennen trotzdem neu geladen\r\n\r\nDas Nachtragen benannte `*.und.mka` korrekt in z. B. `*.eng.mka` um \u2014 und der n\u00e4chste\r\nDurchgang lud dieselbe Tonspur trotzdem noch einmal herunter.\r\n\r\nZwei Ursachen:\r\n\r\n1. **Die Bibliothek wurde gelesen, bevor umbenannt wurde.** Der ganze weitere Lauf sah\r\n   damit die alten Namen. Versch\u00e4rft dadurch, dass das Scan-Ergebnis f\u00fcnf Minuten lang\r\n   gemerkt und zwischen allen Abos geteilt wird \u2014 auch die folgenden Durchg\u00e4nge sahen\r\n   weiter `.und.mka` und hielten die richtige Tonspur f\u00fcr fehlend.\r\n2. **Das gemerkte Scan-Ergebnis blieb nach dem Umbenennen stehen.**\r\n\r\nJetzt wird zuerst nachgetragen und dann gelesen; wurde dabei tats\u00e4chlich etwas\r\numbenannt, wird das gemerkte Bild der Bibliothek verworfen. Gilt auch f\u00fcr das gezielte\r\nNachtragen an einer einzelnen Folge.\r\n\r\n## Wettlauf bei gleichzeitigen Durchg\u00e4ngen\r\n\r\nLaufen zwei Abo-Durchg\u00e4nge gleichzeitig \u00fcber dieselbe Bibliothek, benutzten beide\r\ndieselbe Zwischendatei \u2014 einer zog sie dem anderen unter den H\u00e4nden weg:\r\n\r\n```\r\nCould not replace '\u2026S01E03 - Mein Fleisch und Blut.und.mka' with '\u2026.eng.mka'.\r\nSystem.IO.FileNotFoundException: \u2026 .eng.mka.mvdl-tmp\r\n```\r\n\r\nDie Zwischendatei ist jetzt pro Vorgang eindeutig. Ein vom anderen Durchgang bereits\r\nfertiggestellter Wechsel gilt als erledigt statt als Fehler \u2014 auf der Platte steht\r\nohnehin genau das gewollte Ergebnis.\r\n\r\n## Enth\u00e4lt au\u00dferdem 0.0.0.33 bis 0.0.0.35\r\n\r\nDer komplette Umbau der Tonspur-Einstellungen: Betriebsart \u201eSprachfassungen\" im Reiter\r\n*Download*, die Drei-Wege-Entscheidung f\u00fcr unbestimmbare Originalversionen, eigene\r\nUntermen\u00fcs f\u00fcr Audiodeskription und klare Sprache (beide standardm\u00e4\u00dfig aus), das\r\nWarnfenster bei fehlender erweiterter Duplikaterkennung, der Tonspur-Filter unter den\r\nDauer-Feldern und die umbenannten Erkennungs-Optionen.",
+                "timestamp": "2026-09-05T14:40:54Z",
+                "sourceUrl": "https://github.com/CuriousApe2020/jellyfin-plugin-MediathekViewDL/releases/download/v0.0.0.36/curiousapes-mediathekview-downloader_0.0.0.36.zip",
+                "checksum": "7b558429ac6d80043b23403c2333013b",
+                "targetAbi": "10.11.0.0"
+            },
+            {
                 "version": "0.0.0.35",
                 "changelog": "",
                 "timestamp": "2026-09-04T21:28:24Z",
